@@ -7,10 +7,10 @@ title: Matt License
     <div class="posts">
         {% for post in site.posts %}
         <div class="post">
-            <a class="title" href="{{ post.url }}">{{ post.title }}</a><br>
+            <a class="title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br>
             <p class="meta">{{ post.date | date_to_long_string }}</p>
             {{ post.excerpt | strip_html }}<br>
-            <a class="more" href="{{ post.url }}">More...</a>
+            <a class="more" href="{{ site.baseurl }}{{ post.url }}">More...</a>
         </div>
         {% endfor %}
     </div>
