@@ -6,39 +6,41 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/screen.css" media="screen, projection">
+        <link rel="stylesheet" href="/css/print.css" media="print">
         <link rel="stylesheet" href="/css/syntax.css">
-
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     </head>
     <body>
 
         <div class="site">
           <div class="header">
             <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
+            <a class="extra" href="/">Home</a>
+            <a class="extra" href="/about">About</a>
           </div>
 
           {{ content }}
 
           <div class="footer">
-            <div class="contact">
+            <div class="contact two-thirds">
               <p>
-                Your Name<br />
-                What You Are<br />
-                you@example.com
+                Graduating Computer Science and Mathematics student.<br>
+                A blog about me learning things.<br>
+                <span class="fa fa-envelope"></span> matt [at] mattlicense [dot] co [dot] uk
               </p>
             </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
+            <div class="contact third">
+              <p class="external">
+                <a href="https://github.com/MattLicense"><span class="fa fa-github"></span>GitHub</a><br>
+                <a href="https://twitter.com/MattLicense"><span class="fa fa-twitter"></span>Twitter</a><br>
+                <a href="http://www.linkedin.com/pub/matt-license/40/955/3a2"><span class="fa fa-linkedin"></span>LinkedIn</a>
               </p>
             </div>
           </div>
         </div>
 
+        <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script>$(document).ready(function(){$('a[href^="http"]').each(function(){$(this).attr('target','_blank');});});</script>
     </body>
 </html>

@@ -1,3 +1,6 @@
-name: Your New Jekyll Site
+name: Matt License
 markdown: redcarpet
-pygments: true
+highlighter: pygments
+
+permalink: :year/:month/:day/:title/
+

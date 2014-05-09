@@ -2,9 +2,9 @@
 @import url("http://fonts.googleapis.com/css?family=Raleway:400,700|Changa+One|Cutive+Mono|Lora:400,700,700italic,400italic");
 
 $primary-dark: #2A0243;
-$primary-light: #CCA8E4;
-$secondary-dark: #3A5C02;
-$secondary-light: #D5EFAC;
+$primary-light: #EBD9F2;
+$secondary-dark: #800080;
+$secondary-light: #E9D1F1;
 
 $serif-font: 'Raleway', sans-serif;
 $sans-font: 'Lora', serif;
@@ -23,7 +23,7 @@ $mono-font: 'Cutive Mono', monospace;
 }
 
 html, body {
-    font: 100% $serif-font;
+    font: 90% $serif-font;
 }
 
 a, a:hover {
@@ -48,7 +48,6 @@ a, a:hover {
 
     a.extra {
         @include border-radius(7px);
-        border: 1px solid $primary-dark;
         background: $primary-light;
         color: $primary-dark;
         font: 100% $sans-font;
@@ -82,13 +81,13 @@ p {
     }
 
     a {
-        color: $primary-light;
+        color: $secondary-dark;
         font-weight: 700;
         text-decoration: underline;
     }
 
     a.more {
-        margin-top: 1rem;
+        line-height: 2rem;
     }
 
     p.meta {
@@ -109,12 +108,9 @@ p {
             text-align: right;
         }
 
-        a {
-
-            span.fa {
-                margin-right: 5px;
-                color: $secondary-dark;
-            }
+        span.fa {
+            margin-right: 5px;
+            color: $secondary-dark;
         }
 
         a:hover {
@@ -127,13 +123,29 @@ p {
     }
 }
 
+.highlight {
+    font: 100% $mono-font;
+}
+
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
     html { font-size: 107.5%; }
     
     .footer {
         .contact {
+            float: left;
+        }
+        .half {
             width: 50%;
+        }
+        .quarter {
+            width: 25%;
+        }
+        .two-thirds {
+            width: 67%;
+        }
+        .third {
+            width: 33%;
         }
     }
 }
