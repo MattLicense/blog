@@ -1,0 +1,144 @@
+@import "compass/reset";
+@import url("http://fonts.googleapis.com/css?family=Raleway:400,700|Changa+One|Cutive+Mono|Lora:400,700,700italic,400italic");
+
+$primary-dark: #2A0243;
+$primary-light: #CCA8E4;
+$secondary-dark: #3A5C02;
+$secondary-light: #D5EFAC;
+
+$serif-font: 'Raleway', sans-serif;
+$sans-font: 'Lora', serif;
+$display-font: 'Changa One', cursive;
+$mono-font: 'Cutive Mono', monospace;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin margin-bottom() {
+    margin-bottom: 1rem;
+}
+
+html, body {
+    font: 100% $serif-font;
+}
+
+a, a:hover {
+    color: $primary-dark;
+    text-decoration: none;
+}
+
+.site {
+    max-width: 40rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    border-bottom: 2px $primary-dark solid;
+    @include margin-bottom();
+
+    .title {
+        font: 2.5rem $display-font;
+    }
+
+    a.extra {
+        @include border-radius(7px);
+        border: 1px solid $primary-dark;
+        background: $primary-light;
+        color: $primary-dark;
+        font: 100% $sans-font;
+        font-weight: 700;
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        margin: 0.25rem;
+    }
+}
+
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+
+p {
+    @include margin-bottom();
+}
+
+.post {
+    @include margin-bottom();
+    border-bottom: 1.5px dashed $primary-dark;
+
+    h2, a.title {
+        font: 1.75rem $serif-font;
+        font-weight: 700;
+        text-decoration: none;
+        color: $secondary-dark;
+    }
+
+    a {
+        color: $primary-light;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    a.more {
+        margin-top: 1rem;
+    }
+
+    p.meta {
+        color: #C0C0C0;
+        font-weight: 700;
+    }
+
+    p:last-of-type {
+        margin-bottom: 2px;
+    }
+}
+
+.footer {
+    .contact {
+        float: left;
+
+        .external {
+            text-align: right;
+        }
+
+        a {
+
+            span.fa {
+                margin-right: 5px;
+                color: $secondary-dark;
+            }
+        }
+
+        a:hover {
+            text-decoration: underline;
+
+            span.fa {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* Medium screens (640px) */
+@media (min-width: 40rem) {
+    html { font-size: 107.5%; }
+    
+    .footer {
+        .contact {
+            width: 50%;
+        }
+    }
+}
+ 
+/* Large screens (1024px) */
+@media (min-width: 64rem) {
+    html { font-size: 115%; }
+}
