@@ -1,10 +1,13 @@
-@import "compass/reset";
+@import url("http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css");
 @import url("http://fonts.googleapis.com/css?family=Raleway:400,700|Changa+One|Cutive+Mono|Lora:400,700,700italic,400italic");
 
-$primary-dark: #2A0243;
+$primary-dark: #57355e;
 $primary-light: #EBD9F2;
-$secondary-dark: #800080;
-$secondary-light: #E9D1F1;
+$secondary-dark: #44723a;
+$secondary-light: #C1DBA6;
+$color3: #684738;
+$color4: #3c687d;
+$color5: #3e7088;
 
 $serif-font: 'Raleway', sans-serif;
 $sans-font: 'Lora', serif;
@@ -19,7 +22,7 @@ $mono-font: 'Cutive Mono', monospace;
 }
 
 @mixin margin-bottom() {
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
 }
 
 html, body {
@@ -67,6 +70,10 @@ a, a:hover {
 
 p {
     @include margin-bottom();
+}
+
+h1, h2 {
+    margin: 0;
 }
 
 .post {
@@ -125,6 +132,31 @@ p {
 
 .highlight {
     font: 100% $mono-font;
+}
+
+pre {
+    margin: 1rem 0;
+    background: #D8D8D8;
+    border: 1px solid #BEBEBE;
+    display: block;
+    overflow: hidden;
+
+    code {
+        font-family: $mono-font;
+        overflow-x: scroll;
+        width: 100%;
+        display: block;
+
+        span {
+            display: inline-block;
+        }
+    }
+}
+
+code {
+    background: #D8D8D8;
+    border: 1px solid #BEBEBE;
+    font-family: $mono-font;
 }
 
 /* Medium screens (640px) */
