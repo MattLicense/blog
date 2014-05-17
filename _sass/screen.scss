@@ -26,7 +26,7 @@ $mono-font: 'Cutive Mono', monospace;
 }
 
 html, body {
-    font: 90% $serif-font;
+    font: 105% $serif-font;
 }
 
 a, a:hover {
@@ -110,9 +110,10 @@ h1, h2 {
 .footer {
     .contact {
         float: left;
+        width: 100%;
 
         .external {
-            text-align: right;
+            text-align: center;
         }
 
         span.fa {
@@ -161,11 +162,19 @@ code {
 
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
-    html { font-size: 107.5%; }
+    html { font-size: 100%; }
     
     .footer {
         .contact {
             float: left;
+
+            .external {
+                text-align: right;
+
+                a {
+                    display: block;
+                }
+            }
         }
         .half {
             width: 50%;
@@ -184,5 +193,5 @@ code {
  
 /* Large screens (1024px) */
 @media (min-width: 64rem) {
-    html { font-size: 115%; }
+    html { font-size: 97.5%; }
 }
