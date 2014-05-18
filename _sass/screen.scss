@@ -40,6 +40,11 @@ a, a:hover {
     margin: 0 auto;
 }
 
+.addthis_toolbox {
+    float: right;
+    @include margin-bottom();
+}
+
 .header {
     width: 100%;
     border-bottom: 2px $primary-dark solid;
