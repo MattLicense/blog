@@ -1,0 +1,8 @@
+.addthis_toolbox {
+  float: left;
+  margin-bottom: 5px;
+
+  @media (min-width: 40rem) {
+    float: right;
+  }
+}

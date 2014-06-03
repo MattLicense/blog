@@ -1,0 +1,31 @@
+$primary-dark: #57355e;
+$background: #472B87;
+
+html, body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font: 100% $serif-font;
+  color: #000000;
+}
+
+a {
+  color: $primary-dark;
+}
+
+.clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.dashed {
+  border-bottom: 1px dashed #000000;
+}

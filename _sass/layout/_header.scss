@@ -1,0 +1,33 @@
+.hero {
+  color: $primary-dark;
+  background: $background;
+  border-bottom: 3px #000000 solid;
+  border-top: 3px #000000 solid;
+
+  .header {
+    padding: 0 5px;
+
+    h1 {
+      font-family: $display-font;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    a.extra {
+      display: inline-block;
+      background: $primary-dark;
+      border: 2px #ffffff solid;
+      border-bottom: 0;
+      padding: 2px 5px;
+
+      &:hover {
+        background: #ffffff;
+        color: $primary-dark;
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+$headers: (h1 2.5em 0) (h2 1.5em 0.4rem) (h3 1.2em 0.4rem);
+@each $header in $headers {
+  #{nth($header, 1)} {
+    font-size: nth($header, 2);
+    margin: nth($header, 3) 0 0 0;
+    font-weight: bold;
+  }
+}
+
+.row {
+  @extend .clearfix;
+
+  width: auto;
+  margin: 0px;
+  padding: 0 5px;
+
+  @media (min-width: 40rem) {
+    padding: 0 12.5%;
+  }
+
+  @media (min-width: 64rem) {
+    padding: 0 20%;
+  }
+
+  .column {
+    float: left;
+    width: 100%;
+    margin: 0px;
+
+    @media (min-width: 40rem) {
+      &.full { width: 100% }
+      &.half { width: 50%; }
+      &.quarter { width: 25%; }
+      &.third { width: 33.3% }
+      &.two-thirds { width: 66.7% }
+    }
+  }
+}

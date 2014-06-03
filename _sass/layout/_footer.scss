@@ -1,0 +1,40 @@
+.footer > .column {
+
+  .about {
+    text-align: center;
+    margin-bottom: 0px;
+
+    @media (min-width: 40rem) {
+      text-align: left;
+
+      span.fa {
+        margin-right: 3px;
+      }
+      a {
+        display: block;
+      }
+    }
+  }
+
+  .external {
+    text-align: center;
+    margin: 1rem 0;
+
+    a {
+      display: inline-block;
+      margin: 0 3px;
+    }
+
+    @media (min-width: 40rem) {
+      float: right;
+      text-align: right;
+
+      span.fa {
+        margin-right: 3px;
+      }
+      a {
+        display: block;
+      }
+    }
+  }
+}

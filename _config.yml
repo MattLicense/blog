@@ -5,3 +5,5 @@ highlighter: pygments
 baseurl: /blog
 
 permalink: :year/:month/:day/:title/
+
+exclude: [config.rb, CNAME]

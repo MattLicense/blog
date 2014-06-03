@@ -39,7 +39,7 @@ The first of these points rules out any API end points used to update (`PUT`) or
 Generally, I found CORS to be an effective solution to bypass the Same-Origin Policy when I was working on this project. I'm not particularly happy with the lack of support for IE9 and below, but without wholescale restructuring of the API, I could find no viable solution.
 
 \[1]: [https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy][SOP]<br>
-\[2]: [https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS][Options]<br>
+\[2]: [https://developer.mozilla.org/en-US/docs/Web/HTTP/Access\_control\_CORS][Options]<br>
 \[3]: [http://blogs.msdn.com/b/ieinternals/archive/2010/05/13/xdomainrequest-restrictions-limitations-and-workarounds.aspx][IE9]
 
 [hugo]: http://data.mattlicense.co.uk

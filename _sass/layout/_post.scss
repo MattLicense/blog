@@ -1,0 +1,26 @@
+.posts {
+    .post {
+      @extend .dashed;
+    }
+}
+
+.post {
+  padding-bottom: 0.5rem;
+
+  h2 {
+    margin-top: 0.5rem;
+  }
+
+  a.more {
+    float: right;
+    font-weight: bold;
+    display: block;
+  }
+
+  .meta {
+    margin-top: 0px;
+    color: #c0c0c0;
+    font: $mono-font;
+    font-weight: bold;
+  }
+}

@@ -2,16 +2,15 @@
 layout: default
 title: Matt License
 ---
-
-<div id="home">
-    <div class="posts">
-        {% for post in site.posts %}
-        <div class="post">
-            <a class="title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a><br>
-            <p class="meta">{{ post.date | date_to_long_string }}</p>
-            {{ post.excerpt | strip_html }}<br>
-            <a class="more" href="{{ site.baseurl }}{{ post.url }}">More...</a>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+<div id="column full">
+                <div class="posts" itemscope itemtype="http://schema.org/Blog">
+                    {% for post in site.posts %}
+                    <div class="post" itemscope itemtype="http://schema.org/BlogPosting">
+                        <h2 itemprop="name"><a class="title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+                        <p class="meta" itemprop="datePublished" content="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string }}</p>
+                        <div itemprop="description">{{ post.excerpt | strip_html }}</div>
+                        <br><a itemprop="url" class="more" href="{{ site.baseurl }}{{ post.url }}">More...</a><br>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
