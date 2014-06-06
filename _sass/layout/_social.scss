@@ -2,7 +2,7 @@
   float: left;
   margin-bottom: 5px;
 
-  @media (min-width: 32rem) {
+  @media (min-device-width: 32rem) {
     float: right;
   }
 }

@@ -12,8 +12,8 @@ I've also spent some time adding schema.org<sup>[[2][schema.org]]</sup> metadata
 
 All in all, this has made for a fairly constructive bit of procrastination from my last two exams!
 
-\[1]: [https://developers.google.com/speed/pagespeed/insights/?utm_source=analytics&tab=desktop&url=http%3A%2F%2Fmattlicense.co.uk%2Fblog%2F][pagespeed]<br>
-\[2]: [http://schema.org][schema.org]
+\[1]: [Google Pagespeed Insights][pagespeed]<br>
+\[2]: [schema.org][schema.org]
 
 [pagespeed]: https://developers.google.com/speed/pagespeed/insights/?utm_source=analytics&tab=desktop&url=http%3A%2F%2Fmattlicense.co.uk%2Fblog%2F
 [schema.org]: http://schema.org

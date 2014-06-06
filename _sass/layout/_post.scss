@@ -10,10 +10,6 @@
   .entry a {
     color: $tertiary-dark;
     font-style: italic;
-    word-break: break-all;
-    word-wrap: break-word;
-    white-space: pre;
-    display: inline-block;
   }
 
   a.more {
@@ -24,6 +20,13 @@
 
   pre, code {
     background: #e8e8e8;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    max-width: 100%;
   }
 
   .meta {
