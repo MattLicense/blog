@@ -1,31 +1,53 @@
-.hero {
+.row.hero {
   color: $primary-dark;
-  background: $background;
+  background: $primary-dark url('/blog/images/header.png') no-repeat 50% 0;
   border-bottom: 3px #000000 solid;
   border-top: 3px #000000 solid;
+  text-align: center;
+  position: relative;
 
-  .header {
-    padding: 0 5px;
+  height: 140px;
+  
+  @media (min-width: 32rem) {
+    height: 170px;
+  }
 
-    h1 {
-      font-family: $display-font;
-    }
+  @media (min-width: 40rem) {
+    height: 200px;
+  }
 
-    a {
-      color: #ffffff;
-      text-decoration: none;
+  .column .header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 70%;
+    width: 99%;
+
+    h1.title {
+      a {
+        color: #ffffff;
+        text-decoration: none;
+      }
     }
 
     a.extra {
+      background: transparent;
+      border: 2px $primary-dark solid;
+      color: $primary-dark;
+      text-align: center;
+      text-decoration: none;
+      width: auto;
+      padding: 0.25rem 0.5rem;
+      font-size: 1.2rem;
+      line-height: 2rem;
       display: inline-block;
-      background: $primary-dark;
-      border: 2px #ffffff solid;
-      border-bottom: 0;
-      padding: 2px 5px;
 
       &:hover {
-        background: #ffffff;
-        color: $primary-dark;
+        background: $primary-dark;
+        color: #ffffff;
         text-decoration: underline;
       }
     }

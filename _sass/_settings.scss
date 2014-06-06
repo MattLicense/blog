@@ -1,11 +1,15 @@
-$primary-dark: #57355e;
-$background: #472B87;
+$primary-light: #5191BE;
+$primary-dark: #1A537B;
+$secondary-light: #FFD763;
+$secondary-dark: #A68420;
+$tertiary-light: #FF8D63;
+$tertiary-dark: #A64420;
 
 html, body {
   width: 100%;
   padding: 0;
   margin: 0;
-  font: 100% $serif-font;
+  font: 100% 'Roboto';
   color: #000000;
 }
 

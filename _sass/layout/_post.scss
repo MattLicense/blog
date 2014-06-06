@@ -1,14 +1,19 @@
 .posts {
     .post {
-      @extend .dashed;
+      border-bottom: 1px dashed #000000;
     }
 }
 
 .post {
   padding-bottom: 0.5rem;
 
-  h2 {
-    margin-top: 0.5rem;
+  .entry a {
+    color: $tertiary-dark;
+    font-style: italic;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: pre;
+    display: inline-block;
   }
 
   a.more {
@@ -17,10 +22,13 @@
     display: block;
   }
 
+  pre, code {
+    background: #e8e8e8;
+  }
+
   .meta {
     margin-top: 0px;
     color: #c0c0c0;
-    font: $mono-font;
-    font-weight: bold;
+    font: "Cutive Mono", monospace;
   }
 }

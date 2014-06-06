@@ -1,25 +1,45 @@
-$headers: (h1 2.5em 0) (h2 1.5em 0.4rem) (h3 1.2em 0.4rem);
+$headers: (h1 3.5rem 0 5rem) (h2 1.5rem 0.4rem 2.5rem) (h3 1.2rem 0.4rem 2rem);
 @each $header in $headers {
+  $font-size: nth($header, 2);
+  $margin-top: nth($header, 3);
+  $line-height: nth($header, 4);
+
   #{nth($header, 1)} {
-    font-size: nth($header, 2);
-    margin: nth($header, 3) 0 0 0;
-    font-weight: bold;
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    font-size: auto;
+    line-height: $font-size/2;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (min-width: 32px) {
+    #{nth($header, 1)} {
+      margin-top: $margin-top*0.8;
+      font-size: $font-size*0.8;
+      line-height: $line-height*0.8;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    #{nth($header, 1)} {
+      margin-top: $margin-top;
+      font-size: $font-size;
+      line-height: $line-height;
+    }
   }
 }
 
 .row {
-  @extend .clearfix;
-
   width: auto;
   margin: 0px;
-  padding: 0 5px;
+  padding: 0 1rem;
 
-  @media (min-width: 40rem) {
+  @media (min-width: 32rem) {
     padding: 0 12.5%;
   }
 
-  @media (min-width: 64rem) {
-    padding: 0 20%;
+  @media (min-width: 48rem) {
+    padding: 0 16%;
   }
 
   .column {
@@ -27,7 +47,7 @@ $headers: (h1 2.5em 0) (h2 1.5em 0.4rem) (h3 1.2em 0.4rem);
     width: 100%;
     margin: 0px;
 
-    @media (min-width: 40rem) {
+    @media (min-width: 32rem) {
       &.full { width: 100% }
       &.half { width: 50%; }
       &.quarter { width: 25%; }
