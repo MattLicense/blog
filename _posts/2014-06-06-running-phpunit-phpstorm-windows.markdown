@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Running PHPUnit in PHPStorm in Windows"
+title:  "Running PHPUnit 4 in PHPStorm 7 in Windows"
 ---
 I've been setting up PHP Storm, my IDE of choice, up for a new project today. Usually, I set up a Vagrant box\*, but I'm looking at a couple of smaller projects which don't really require a virtual machine running in the background.
 
