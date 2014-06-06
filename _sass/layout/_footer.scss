@@ -4,7 +4,7 @@
     text-align: center;
     margin-bottom: 0px;
 
-    @media (min-width: 40rem) {
+    @media (min-width: 32rem) {
       text-align: left;
 
       span.fa {
@@ -23,15 +23,21 @@
     a {
       display: inline-block;
       margin: 0 3px;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
-    @media (min-width: 40rem) {
+    span.fa {
+      margin-right: 3px;
+    }
+
+    @media (min-width: 32rem) {
       float: right;
       text-align: right;
 
-      span.fa {
-        margin-right: 3px;
-      }
       a {
         display: block;
       }
