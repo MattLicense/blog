@@ -16,7 +16,7 @@ Fatal error: Uncaught exception 'UnexpectedValueException' with message 'Cannot 
 
 So I figured it would have something to do with using the ```phpunit.bat``` file instead of the ```.phar``` was asking, but even with that it returned the same error. I figured I would point try the custom loader option, and point it towards my projects ```autoload.php```.
 
-[![Setting the custom loader for PHPUnit](/blog/images/posts/2014-06-06-phpstorm-phpunit-custom-loader.png "Setting the custom loader for PHPUnit")][img1]
+[![Setting the custom loader for PHPUnit](http://static.mattlicense.co.uk/img/posts/2014-06-06-phpstorm-phpunit-custom-loader.png "Setting the custom loader for PHPUnit")][img1]
 
 This gave me a new error, it appeared to be an error in PHPStorms implementation of PHPUnit:
 
@@ -37,7 +37,7 @@ The solution basically revolved around modifying the ```php.jar``` file that the
 public function addRiskyTest(PHPUnit_Framework_Test $test, Exception $e, $time){}
 ```
 
-[![Adding the addRiskyTest function to IDE_PHPUnit_Framework_TestListener](/blog/images/posts/2014-06-06-phpunit-testListener-addRiskyTest.png "Adding the addRiskyTest function to IDE_PHPUnit_Framework_TestListener")][img2]
+[![Adding the addRiskyTest function to IDE_PHPUnit_Framework_TestListener](http://static.mattlicense.co.uk/img/posts/2014-06-06-phpunit-testListener-addRiskyTest.png "Adding the addRiskyTest function to IDE_PHPUnit_Framework_TestListener")][img2]
 
 I saved this new version in the JAR file and booted PHPStorm back up. Once this was done, PHPUnit ran completely fine. Looking at the documentation for the ```PHPUnit_Framework_TestListener``` interface, it seems that the ```addRiskyTest``` function is used to alert the user that it deems the test risky - that is, when running in strict mode<sup>[[2][strict]]</sup>, it will alert the user when:
 
@@ -52,5 +52,5 @@ So while it does take away some of the newer functionality of PHPUnit 4, it allo
 
 [php.jar]: https://stackoverflow.com/questions/22799619/intellij-idea-wont-run-phpunit-4-0-tests/22799620#22799620
 [strict]: http://phpunit.de/manual/current/en/strict-mode.html
-[img1]: /blog/images/posts/2014-06-06-phpstorm-phpunit-custom-loader.png
-[img2]: /blog/images/posts/2014-06-06-phpunit-testListener-addRiskyTest.png
+[img1]: http://static.mattlicense.co.uk/img/posts/2014-06-06-phpstorm-phpunit-custom-loader.png
+[img2]: http://static.mattlicense.co.uk/img/posts/2014-06-06-phpunit-testListener-addRiskyTest.png
